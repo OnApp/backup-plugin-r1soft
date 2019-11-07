@@ -1,0 +1,37 @@
+<config>
+  <agent>
+    <xen>true</xen>
+    <kvm>true</kvm>
+    <vcloud>false</vcloud>
+    <vcenter>false</vcenter>
+  </agent>
+  <plugin_capabilities>
+    <pulling_interval>1800</pulling_interval>
+    <full_machine recovery_mode='true'>true</full_machine>
+    <per_vdisk>false</per_vdisk>
+    <os_files_level>true</os_files_level>
+    <backup_now>true</backup_now>
+    <space_used>true</space_used>
+  </plugin_capabilities>
+  <auto_backup_presets>
+    <schedule>
+      <type>Hourly</type>
+      <frequency>1</frequency>
+      <max_recovery_points>7</max_recovery_points>
+    </schedule>
+  </auto_backup_presets>
+  <scheduler_options max="1">
+    <hourly max="1"/>
+    <daily max="1">
+      <frequency>true</frequency>
+    </daily>
+    <weekly max="1">
+      <days_to_run>true</days_to_run>
+    </weekly>
+    <monthly max="1">
+      <day_of_the_week_to_run>true</day_of_the_week_to_run>
+      <week_of_the_month_to_run>true</week_of_the_month_to_run>
+    </monthly>
+    <yearly max="1"/>
+  </scheduler_options>
+</config>
