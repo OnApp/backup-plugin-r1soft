@@ -22,16 +22,9 @@
   </auto_backup_presets>
   <scheduler_options max="1">
     <hourly max="1"/>
-    <daily max="1">
-      <frequency>true</frequency>
-    </daily>
-    <weekly max="1">
-      <days_to_run>true</days_to_run>
-    </weekly>
-    <monthly max="1">
-      <day_of_the_week_to_run>true</day_of_the_week_to_run>
-      <week_of_the_month_to_run>true</week_of_the_month_to_run>
-    </monthly>
-    <yearly max="1"/>
+    <daily max="0" />
+    <weekly max="0" />
+    <monthly max="0" />
+    <yearly max="0"/>
   </scheduler_options>
 </config>
