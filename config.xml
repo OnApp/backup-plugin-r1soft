@@ -1,7 +1,7 @@
 <config>
   <agent>
-    <xen>true</xen>
-    <kvm>true</kvm>
+    <xen>false</xen>
+    <kvm>false</kvm>
     <vcloud>false</vcloud>
     <vcenter>false</vcenter>
   </agent>
