@@ -9,7 +9,7 @@ Backups::Plugin.hook helpers: %i[policy_client_helper] do
                            replicationScheduleFrequencyType: schedule.period.upcase,
                            replicationScheduleFrequencyValues: {
                              daysOfMonth: -1,
-                             hoursOfDay: 1,
+                             hoursOfDay: (0..23).to_a,
                              startingHour: 1,
                              startingMinute: 0
                            },
