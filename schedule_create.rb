@@ -1,4 +1,6 @@
 Backups::Plugin.hook helpers: %i[policy_client_helper] do
+  HOURLY_AUTO_BACKUP = (0..23).to_a.freeze
+
   def call(schedule, virtual_server)
     policy_client.call(:create_policy, message: {
                          policy: {
@@ -9,7 +11,7 @@ Backups::Plugin.hook helpers: %i[policy_client_helper] do
                            replicationScheduleFrequencyType: schedule.period.upcase,
                            replicationScheduleFrequencyValues: {
                              daysOfMonth: -1,
-                             hoursOfDay: 1,
+                             hoursOfDay: HOURLY_AUTO_BACKUP,
                              startingHour: 1,
                              startingMinute: 0
                            },
